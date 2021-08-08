@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Domains\Meals\Http\Controllers;
 
 use App\Models\Protein;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ProteinController extends Controller
 {

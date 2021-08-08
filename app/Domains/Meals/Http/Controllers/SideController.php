@@ -2,8 +2,8 @@
 
 namespace App\Domains\Meals\Http\Controllers;
 
-use App\Models\Side;
-use Illuminate\Http\Request;
+use App\Domains\Meals\Http\Requests\GetSidesRequest;
+use App\Domains\Meals\Http\Actions\GetSidesAction;
 use App\Http\Controllers\Controller;
 
 class SideController extends Controller
@@ -13,74 +13,9 @@ class SideController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(GetSidesRequest $request)
     {
-        //
+        return (new GetSidesAction)->execute($request->validated());
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Side  $side
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Side $side)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Side  $side
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Side $side)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Side  $side
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Side $side)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Side  $side
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Side $side)
-    {
-        //
-    }
+    
 }

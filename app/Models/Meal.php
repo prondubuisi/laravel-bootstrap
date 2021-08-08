@@ -17,8 +17,8 @@ class Meal extends Model
      * @var array
      */
     protected $casts = [
-        'side_ids' => 'array',
-        'allergy_ids' => 'array',
+        'side_ids' => 'json',
+        'allergy_ids' => 'json',
     ];
 
     protected $fillable = ['name','side_ids','allergy_ids'];

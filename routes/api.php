@@ -27,5 +27,5 @@ Route::group(['prefix' => 'meals'], function () {
     Route::get('sides', [SideController::class, 'index'])->name('sides.list');
     Route::get('proteins', [ProteinController::class, 'index'])->name('proteins.list');
     Route::get('allergies', [AllergyController::class, 'index'])->name('allergies.list');
-    Route::get('recommendation', [AllergyController::class, 'index'])->name('meal.recommend');
+    Route::get('recommendation', [MealController::class, 'recommend'])->name('meal.recommend');
 });

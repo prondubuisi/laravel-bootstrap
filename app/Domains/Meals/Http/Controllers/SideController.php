@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Domains\Meals\Http\Controllers;
 
-use App\Models\Allergy;
+use App\Models\Side;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class AllergyController extends Controller
+class SideController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class AllergyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Allergy  $allergy
+     * @param  \App\Models\Side  $side
      * @return \Illuminate\Http\Response
      */
-    public function show(Allergy $allergy)
+    public function show(Side $side)
     {
         //
     }
@@ -52,10 +53,10 @@ class AllergyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Allergy  $allergy
+     * @param  \App\Models\Side  $side
      * @return \Illuminate\Http\Response
      */
-    public function edit(Allergy $allergy)
+    public function edit(Side $side)
     {
         //
     }
@@ -64,10 +65,10 @@ class AllergyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Allergy  $allergy
+     * @param  \App\Models\Side  $side
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Allergy $allergy)
+    public function update(Request $request, Side $side)
     {
         //
     }
@@ -75,10 +76,10 @@ class AllergyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Allergy  $allergy
+     * @param  \App\Models\Side  $side
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Allergy $allergy)
+    public function destroy(Side $side)
     {
         //
     }

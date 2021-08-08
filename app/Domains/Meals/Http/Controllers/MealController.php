@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Domains\Meals\Http\Controllers;
 
-use App\Models\Side;
+use App\Models\Meal;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class SideController extends Controller
+class MealController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class SideController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Side  $side
+     * @param  \App\Models\Meal  $meal
      * @return \Illuminate\Http\Response
      */
-    public function show(Side $side)
+    public function show(Meal $meal)
     {
         //
     }
@@ -52,10 +53,10 @@ class SideController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Side  $side
+     * @param  \App\Models\Meal  $meal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Side $side)
+    public function edit(Meal $meal)
     {
         //
     }
@@ -64,10 +65,10 @@ class SideController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Side  $side
+     * @param  \App\Models\Meal  $meal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Side $side)
+    public function update(Request $request, Meal $meal)
     {
         //
     }
@@ -75,10 +76,10 @@ class SideController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Side  $side
+     * @param  \App\Models\Meal  $meal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Side $side)
+    public function destroy(Meal $meal)
     {
         //
     }

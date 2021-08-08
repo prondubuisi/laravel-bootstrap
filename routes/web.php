@@ -18,4 +18,3 @@ Route::get('/', function () {
     return response()->json("Welcome to Eden Meal Recommendation API Service");
 });
 
-Route::get('/', [TestController::class, 'index']);

@@ -25,7 +25,7 @@ class RecommendMealsRequest extends FormRequest
     public function rules()
     {
         return [
-            'allergies' => ['nullable', 'array', new GetMealRecommendationRule()],
+            'allergies' => ['required', 'array', new GetMealRecommendationRule()],
             'length' => ['nullable','integer'],
         ];
     }

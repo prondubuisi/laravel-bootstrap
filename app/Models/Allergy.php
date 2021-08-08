@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use \Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
+use Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
 use Illuminate\Support\Str;
 
 
@@ -16,11 +15,11 @@ class Allergy extends Model
 
     /**
      * returns the Meal associated with Allergy
-     * @return BelongsTo 
+     * @return HasJsonRelationships 
      */
     public function meals()
     {
-        return $this->hasManyJson(meal::class, 'allergy_ids');
+        return $this->hasManyJson(Meal::class, 'name');
     }
 
     /**
@@ -30,8 +29,8 @@ class Allergy extends Model
     {
         parent::boot();
 
-        static::creating(function ($protien) {
-            $protien->uid = Str::uuid();;
+        static::creating(function ($allergy) {
+            $allergy->uid = Str::uuid();;
         });
     }
 }

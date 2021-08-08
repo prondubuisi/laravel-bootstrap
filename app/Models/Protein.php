@@ -19,8 +19,8 @@ class Protein extends Model
     {
         parent::boot();
 
-        static::creating(function ($protien) {
-            $protien->uid = Str::uuid();;
+        static::creating(function ($protein) {
+            $protein->uid = Str::uuid();;
         });
     }
 }

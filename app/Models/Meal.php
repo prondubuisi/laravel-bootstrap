@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
 
 class Meal extends Model
 {
-    use HasFactory;
+    use HasFactory, HasJsonRelationships;
 
     /**
      * The attributes that should be cast.
@@ -17,7 +18,7 @@ class Meal extends Model
      */
     protected $casts = [
         'side_ids' => 'array',
-        'allergy_ids' => 'array'
+        'allergy_ids' => 'array',
     ];
 
     protected $fillable = ['name','side_ids','allergy_ids'];
@@ -29,18 +30,27 @@ class Meal extends Model
     {
         parent::boot();
 
-        static::creating(function ($protien) {
-            $protien->uid = Str::uuid();;
+        static::creating(function ($meal) {
+            $meal->uid = Str::uuid();;
         });
     }
 
     /**
-     * returns the Meal associated with Allergy
+     * returns the Meal associated with Allergies
      * @return BelongsTo 
      */
     public function allergies()
     {
-        return $this->belongsToJson(Allergy::class,'name');
+        return $this->belongsToJson(Allergy::class,'allergy_ids');
+    }
+
+    /**
+     * returns the Meal associated with Sides
+     * @return BelongsTo 
+     */
+    public function sides()
+    {
+        return $this->belongsToJson(Side::class,'side_ids');
     }
 
 

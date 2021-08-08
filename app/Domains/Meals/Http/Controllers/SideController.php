@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class SideController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the  Side resource.
      *
      * @return \Illuminate\Http\Response
      */

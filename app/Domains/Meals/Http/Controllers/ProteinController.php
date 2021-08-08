@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class ProteinController extends Controller
 {
     /**
-     * Display a listing of the protein resource.
+     * Display a listing of the Protein resource.
      *
      * @return \Illuminate\Http\Response
      */

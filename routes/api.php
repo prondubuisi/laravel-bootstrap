@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'meals'], function () {
-    Route::get('meals', [MealController::class, 'index'])->name('meals.list');
+    Route::get('', [MealController::class, 'index'])->name('meals.list');
     Route::get('sides', [SideController::class, 'index'])->name('sides.list');
     Route::get('proteins', [ProteinController::class, 'index'])->name('proteins.list');
     Route::get('allergies', [AllergyController::class, 'index'])->name('allergies.list');

@@ -12,14 +12,23 @@ class Side extends Model
     protected $fillable = ['name', 'type'];
 
     /**
+     * returns the Meal associated with Allergy
+     * @return HasJsonRelationships 
+     */
+    public function meals()
+    {
+        return $this->hasManyJson(Meal::class, 'name');
+    }
+
+    /**
     * Boot the Model.
     */
     public static function boot()
     {
         parent::boot();
 
-        static::creating(function ($protien) {
-            $protien->uid = Str::uuid();;
+        static::creating(function ($side) {
+            $side->uid = Str::uuid();;
         });
     }
 }

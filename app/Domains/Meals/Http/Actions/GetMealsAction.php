@@ -21,6 +21,6 @@ class GetMealsAction{
         $length = $requestData['length'] ?? 20;
 
         $meals = Meal::paginate($length);
-        return $this->successResponseWithCollection('Allergies fetched successfully', MealsResource::collection($meals)->response()->getData());
+        return $this->successResponseWithCollection('Meals fetched successfully', MealsResource::collection($meals)->response()->getData());
     }
 }
